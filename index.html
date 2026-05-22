@@ -397,6 +397,54 @@ body{background:var(--dark);color:var(--text);font-family:'Rajdhani',sans-serif;
 ::-webkit-scrollbar-track{background:var(--dark);}
 ::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.2);border-radius:2px;}
 
+/* ===== THEME TOGGLE ===== */
+#theme-toggle{
+  background:none;border:1px solid var(--border);
+  width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:var(--muted);font-size:13px;
+  transition:border-color 0.2s,color 0.2s;flex-shrink:0;margin-left:4px;
+}
+#theme-toggle:hover{border-color:var(--border2);color:var(--gold);}
+
+/* ===== LIGHT MODE ===== */
+html.light{
+  --dark:#f4f1eb;
+  --dark2:#ece9e2;
+  --dark3:#e2dfd7;
+  --text:#1c1a16;
+  --muted:#7a7570;
+  --border:rgba(60,45,10,0.13);
+  --border2:rgba(60,45,10,0.32);
+}
+html.light body{background:var(--dark);color:var(--text);}
+html.light .topbar{background:rgba(244,241,235,0.97);border-bottom-color:var(--border);}
+html.light .hero-overlay{
+  background:linear-gradient(to bottom,
+    rgba(244,241,235,0.15) 0%,
+    rgba(244,241,235,0.05) 40%,
+    rgba(244,241,235,0.65) 80%,
+    rgba(244,241,235,1) 100%
+  );
+}
+html.light .photo-band-overlay{
+  background:linear-gradient(to right,rgba(244,241,235,0.82),transparent,rgba(244,241,235,0.82));
+}
+html.light .hero-title{color:#1c1a16;}
+html.light .hero-quote{color:rgba(28,26,22,0.7);}
+html.light .hero-sub{color:rgba(28,26,22,0.5);}
+html.light .grade-row:hover{background:rgba(201,168,76,0.06);}
+html.light .grade-row.hl{background:rgba(74,159,212,0.07);}
+html.light .grade-row.top{background:rgba(201,168,76,0.09);}
+html.light .art-header:hover{background:var(--dark3);}
+html.light .b-desc{color:rgba(28,26,22,0.6);}
+html.light .pream-text{color:rgba(28,26,22,0.65);}
+html.light ::-webkit-scrollbar-track{background:var(--dark);}
+html.light #mobile-nav{background:var(--dark2);}
+html.light .mob-item:hover{background:var(--dark3);}
+html.light .nav-dropdown{background:var(--dark2);border-color:var(--border);}
+html.light .nav-dd-item:hover{background:var(--dark3);}
+html.light #search-overlay{background:rgba(244,241,235,0.97);}
+
 /* ===== MUTATIONS PAGE ===== */
 .mut-wrap{max-width:1140px;margin:0 auto;padding:0 1rem;}
 .mut-hero-title{font-family:'Bebas Neue',sans-serif;font-size:52px;letter-spacing:0.07em;color:var(--text);line-height:1.1;margin-bottom:.4rem;}
@@ -702,8 +750,9 @@ body{background:var(--dark);color:var(--text);font-family:'Rajdhani',sans-serif;
   </div>
   <button id="nav-burger" onclick="toggleMobileNav()" aria-label="Menu" style="display:none;background:none;border:none;cursor:pointer;padding:0 14px;height:52px;color:var(--text);font-size:22px;line-height:1;">&#9776;</button>
   <div class="tn" onclick="toggleSearch()" title="Rechercher" style="font-size:16px;padding:0 12px;cursor:pointer;">&#128269;</div>
-  <div id="nav-version" style="margin-left:auto;flex-shrink:0;">
-    <div style="font-family: &quot;Share Tech Mono&quot;, monospace; font-size: 9px; color: var(--gold); letter-spacing: 0.2em; border: 1px solid rgba(201, 168, 76, 0.4); padding: 3px 8px; --darkreader-inline-color: var(--darkreader-text--gold, var(--darkreader-text-000000, #f4f2ee)); --darkreader-inline-border-top: var(--darkreader-border-c9a84c66, rgba(139, 113, 42, 0.4)); --darkreader-inline-border-right: var(--darkreader-border-c9a84c66, rgba(139, 113, 42, 0.4)); --darkreader-inline-border-bottom: var(--darkreader-border-c9a84c66, rgba(139, 113, 42, 0.4)); --darkreader-inline-border-left: var(--darkreader-border-c9a84c66, rgba(139, 113, 42, 0.4));" data-darkreader-inline-color="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">V 2.0</div>
+  <div id="nav-version" style="margin-left:auto;flex-shrink:0;display:flex;align-items:center;gap:8px;">
+    <div style="font-family: &quot;Share Tech Mono&quot;, monospace; font-size: 9px; color: var(--gold); letter-spacing: 0.2em; border: 1px solid rgba(201, 168, 76, 0.4); padding: 3px 8px;">V 2.0</div>
+    <button id="theme-toggle" onclick="toggleTheme()" title="Mode clair / sombre"><span id="theme-icon">&#9788;</span></button>
   </div>
 
 </nav>
@@ -3475,6 +3524,25 @@ function mut2Step(step){
 </div>
 
 <script>
+/* ===== THEME TOGGLE ===== */
+function toggleTheme(){
+  var isLight=document.documentElement.classList.toggle('light');
+  var icon=document.getElementById('theme-icon');
+  if(icon)icon.innerHTML=isLight?'&#9790;':'&#9788;';
+  try{localStorage.setItem('bcso-theme',isLight?'light':'dark');}catch(e){}
+}
+(function(){
+  try{
+    if(localStorage.getItem('bcso-theme')==='light'){
+      document.documentElement.classList.add('light');
+      document.addEventListener('DOMContentLoaded',function(){
+        var icon=document.getElementById('theme-icon');
+        if(icon)icon.innerHTML='&#9790;';
+      });
+    }
+  }catch(e){}
+})();
+
 function toggleSearch(){
   var o=document.getElementById('search-overlay');
   var inp=document.getElementById('search-input');
