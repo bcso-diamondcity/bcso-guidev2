@@ -695,6 +695,7 @@ body{background:var(--dark);color:var(--text);font-family:'Rajdhani',sans-serif;
         <div class="nav-dd-item" onclick="showPage(&#39;procedures&#39;)">Procédures</div>
         <div class="nav-dd-item" onclick="showPage(&#39;protocoles&#39;)">Protocoles</div>
         <div class="nav-dd-item" onclick="showPage(&#39;mutations&#39;)">Mutations</div>
+        <div class="nav-dd-item" onclick="showPage(&#39;defcon&#39;)">DEFCON</div>
       </div>
     </div>
     <div class="tn nav-dd-wrap">
@@ -747,6 +748,7 @@ body{background:var(--dark);color:var(--text);font-family:'Rajdhani',sans-serif;
         <div class="mob-item" onclick="showPage('procedures');closeMobileNav()"><span class="mob-item-bar"></span><span class="mob-item-txt">Proc&#233;dures</span></div>
         <div class="mob-item" onclick="showPage('protocoles');closeMobileNav()"><span class="mob-item-bar"></span><span class="mob-item-txt">Protocoles</span></div>
         <div class="mob-item" onclick="showPage('mutations');closeMobileNav()"><span class="mob-item-bar"></span><span class="mob-item-txt">Mutations</span></div>
+        <div class="mob-item" onclick="showPage('defcon');closeMobileNav()"><span class="mob-item-bar"></span><span class="mob-item-txt">DEFCON</span></div>
 
         <div class="mob-section">Documents Officiels</div>
         <div class="mob-item" onclick="showPage('justice');closeMobileNav()"><span class="mob-item-bar"></span><span class="mob-item-txt">Justice &amp; Code p&#233;nal</span></div>
@@ -800,6 +802,7 @@ function runSearch(){
     {id:'formations',label:'Formations'},
     {id:'promotions',label:'Promotions'},
     {id:'mutations', label:'Mutations'},
+    {id:'defcon',    label:'DEFCON — Niveaux d\'alerte'},
     {id:'poles',     label:'Pôles & Unités'},
     {id:'districts', label:'Districts'},
   ];
@@ -3776,4 +3779,272 @@ function hideMapTooltip() {
       <div style="padding:1.5rem 1.75rem;background:var(--dark2);border-right:1px solid rgba(201,168,76,0.1);display:flex;align-items:flex-start;gap:1rem;">
         <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:rgba(201,168,76,0.15);line-height:1;flex-shrink:0;">01</div>
         <div>
-          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:0.2em;margin-bot
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:0.2em;margin-bottom:6px;">TICKET RH</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.6;">Ouvrir un ticket au Pôle Ressources Humaines en précisant votre grade actuel et la branche souhaitée.</div>
+        </div>
+      </div>
+      <div style="padding:1.5rem 1.75rem;background:var(--dark2);border-right:1px solid rgba(201,168,76,0.1);display:flex;align-items:flex-start;gap:1rem;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:rgba(201,168,76,0.15);line-height:1;flex-shrink:0;">02</div>
+        <div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:0.2em;margin-bottom:6px;">ÉVALUATION</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.6;">Votre commandement actuel et le directeur de la branche d'accueil étudient la demande.</div>
+        </div>
+      </div>
+      <div style="padding:1.5rem 1.75rem;background:var(--dark2);display:flex;align-items:flex-start;gap:1rem;">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:40px;color:rgba(201,168,76,0.15);line-height:1;flex-shrink:0;">03</div>
+        <div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:0.2em;margin-bottom:6px;">VALIDATION FINALE</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.6;">L'Office of Sheriff tranche en dernier recours. Droit de veto absolu — la décision est définitive.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- ===== PAGE DEFCON ===== -->
+<div id="page-defcon" class="page">
+  <!-- Hero -->
+  <div class="page-hero" style="background:linear-gradient(135deg,#0a0b0e 0%,#0d0f13 60%,rgba(192,57,43,0.08) 100%);border-bottom:1px solid rgba(201,168,76,0.15);padding:4rem 4rem 2.5rem;">
+    <div style="max-width:1100px;margin:0 auto;">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--iad);letter-spacing:0.5em;margin-bottom:1rem;opacity:0.8;">ÉTAT DE SAN ANDREAS · SYSTÈME D'ALERTE NATIONAL</div>
+      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:64px;letter-spacing:0.08em;color:var(--text);line-height:1;margin-bottom:0.75rem;">NIVEAUX <span style="color:var(--iad)">DEFCON</span></h1>
+      <p style="font-size:15px;color:var(--muted);max-width:600px;line-height:1.6;">Defense Readiness Condition — Système de préparation à la défense de l'État de San Andreas. Chaque niveau définit les droits opérationnels, l'équipement autorisé et le degré de mobilisation des forces de l'ordre.</p>
+      <!-- Stats bar -->
+      <div style="display:flex;gap:0;margin-top:2rem;border:1px solid rgba(201,168,76,0.12);border-radius:2px;overflow:hidden;">
+        <div style="flex:1;padding:0.9rem 1.25rem;background:rgba(58,123,213,0.08);border-right:1px solid rgba(201,168,76,0.08);text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:#3a7bd5;letter-spacing:.1em;">5</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.15em;margin-top:2px;">NIVEAUX</div>
+        </div>
+        <div style="flex:1;padding:0.9rem 1.25rem;background:rgba(192,57,43,0.08);border-right:1px solid rgba(201,168,76,0.08);text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--iad);letter-spacing:.1em;">DEFCON 1</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.15em;margin-top:2px;">NIVEAU MAX</div>
+        </div>
+        <div style="flex:1;padding:0.9rem 1.25rem;background:rgba(201,168,76,0.05);border-right:1px solid rgba(201,168,76,0.08);text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--gold);letter-spacing:.1em;">WASHINGTON</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.15em;margin-top:2px;">AUTORISATION D2 & D1</div>
+        </div>
+        <div style="flex:1;padding:0.9rem 1.25rem;background:rgba(192,57,43,0.06);text-align:center;">
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--iad);letter-spacing:.1em;">US ARMY</div>
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.15em;margin-top:2px;">DÉPLOYÉE EN DEFCON 1</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cartes DEFCON -->
+  <div style="max-width:1100px;margin:0 auto;padding:3rem 2rem;">
+
+    <!-- DEFCON 5 -->
+    <div style="border:1px solid rgba(58,123,213,0.3);border-left:4px solid #3a7bd5;background:linear-gradient(135deg,rgba(58,123,213,0.06) 0%,var(--dark2) 60%);border-radius:2px;margin-bottom:1.5rem;overflow:hidden;">
+      <div style="padding:1.5rem 2rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(58,123,213,0.15);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#3a7bd5;letter-spacing:.08em;line-height:1;flex-shrink:0;">DEFCON 5</div>
+        <div style="flex:1;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#3a7bd5;letter-spacing:.3em;margin-bottom:4px;">AUCUN DANGER</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.5;">Situation normale. Aucune menace identifiée sur le territoire de San Andreas.</div>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.15em;text-align:right;">DURÉE<br><span style="color:#3a7bd5;font-size:14px;">INDÉTERMINÉ</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;">
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(58,123,213,0.1);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">AUTORISATION</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Gouvernement</div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(58,123,213,0.1);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">DROITS LSPD / BCSO</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Contrôle d'identité <span style="color:var(--muted);font-weight:400;">(sans palpation)</span></div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">ÉQUIPEMENT AUTORISÉ</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Gilet sans poche · Arme légère</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEFCON 4 -->
+    <div style="border:1px solid rgba(74,140,66,0.3);border-left:4px solid #4a8c42;background:linear-gradient(135deg,rgba(74,140,66,0.06) 0%,var(--dark2) 60%);border-radius:2px;margin-bottom:1.5rem;overflow:hidden;">
+      <div style="padding:1.5rem 2rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(74,140,66,0.15);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#4a8c42;letter-spacing:.08em;line-height:1;flex-shrink:0;">DEFCON 4</div>
+        <div style="flex:1;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#4a8c42;letter-spacing:.3em;margin-bottom:4px;">CRIMINALITÉ NON ÉLEVÉE</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.5;">Légère hausse de la criminalité. Renforcement des contrôles et présence GPB en uniforme.</div>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.15em;text-align:right;">DURÉE<br><span style="color:#4a8c42;font-size:14px;">INDÉTERMINÉ</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;">
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(74,140,66,0.1);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">AUTORISATION</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Gouvernement</div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(74,140,66,0.1);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">DROITS LSPD / BCSO</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Contrôle renforcé · <span style="color:#4a8c42;">GPB sous uniforme</span></div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">ÉQUIPEMENT AUTORISÉ</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Gilet sous uniforme · Arme légère</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEFCON 3 -->
+    <div style="border:1px solid rgba(212,184,74,0.3);border-left:4px solid #d4b84a;background:linear-gradient(135deg,rgba(212,184,74,0.06) 0%,var(--dark2) 60%);border-radius:2px;margin-bottom:1.5rem;overflow:hidden;">
+      <div style="padding:1.5rem 2rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(212,184,74,0.15);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#d4b84a;letter-spacing:.08em;line-height:1;flex-shrink:0;">DEFCON 3</div>
+        <div style="flex:1;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#d4b84a;letter-spacing:.3em;margin-bottom:4px;">MENACE À LA SÉCURITÉ PUBLIQUE</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.5;">Menace active sur le territoire. Déploiement aux frontières et armement lourd autorisé par patrouille.</div>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.15em;text-align:right;">DURÉE<br><span style="color:#d4b84a;font-size:14px;">INDÉTERMINÉ</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;">
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(212,184,74,0.1);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">AUTORISATION</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Gouvernement</div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(212,184,74,0.1);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">DROITS LSPD / BCSO</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Déploiement aux frontières</div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">ÉQUIPEMENT AUTORISÉ</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Gilet avec poche · <span style="color:#d4b84a;">1 arme lourde / patrouille</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEFCON 2 -->
+    <div style="border:1px solid rgba(224,135,42,0.4);border-left:4px solid #e0872a;background:linear-gradient(135deg,rgba(224,135,42,0.08) 0%,var(--dark2) 60%);border-radius:2px;margin-bottom:1.5rem;overflow:hidden;">
+      <div style="padding:1.5rem 2rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(224,135,42,0.2);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:#e0872a;letter-spacing:.08em;line-height:1;flex-shrink:0;">DEFCON 2</div>
+        <div style="flex:1;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#e0872a;letter-spacing:.3em;margin-bottom:4px;">SÉCURITÉ PUBLIQUE COMPROMISE</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.5;">L'ordre public ne peut plus être maintenu normalement. Fouilles étendues sans motif et déploiement lourd autorisé.</div>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.15em;text-align:right;">DURÉE · <span style="color:#e0872a;">1 À 48H</span><br>PROLONGEMENT · <span style="color:#e0872a;">1 À 24H</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;">
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(224,135,42,0.12);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">AUTORISATION</div>
+          <div style="font-size:13px;color:#e0872a;font-weight:700;">Bureau Oval de Washington</div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(224,135,42,0.12);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">DROITS LSPD / BCSO</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Fouille citoyen & coffre · Contrôle d'identité <span style="color:var(--muted);font-weight:400;">sans motif</span></div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">ÉQUIPEMENT AUTORISÉ</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Gilet avec poche · <span style="color:#e0872a;">Arme lourde en déplacement</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEFCON 1 -->
+    <div style="border:1px solid rgba(192,57,43,0.5);border-left:4px solid var(--iad);background:linear-gradient(135deg,rgba(192,57,43,0.1) 0%,var(--dark2) 60%);border-radius:2px;margin-bottom:1.5rem;overflow:hidden;">
+      <div style="padding:1.5rem 2rem;display:flex;align-items:center;gap:2rem;border-bottom:1px solid rgba(192,57,43,0.25);">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:52px;color:var(--iad);letter-spacing:.08em;line-height:1;flex-shrink:0;">DEFCON 1</div>
+        <div style="flex:1;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--iad);letter-spacing:.3em;margin-bottom:4px;">L'ÉTAT DE SAN ANDREAS EST EN GUERRE</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.5;">Niveau d'alerte maximum. Mobilisation totale incluant l'US Army. Tous les droits de fouille et contrôle sont activés.</div>
+        </div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.15em;text-align:right;">DURÉE · <span style="color:var(--iad);">1 À 96H</span><br>PROLONGEMENT · <span style="color:var(--iad);">1 À 96H</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;">
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(192,57,43,0.15);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">AUTORISATION</div>
+          <div style="font-size:13px;color:var(--iad);font-weight:700;">Bureau Oval de Washington</div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;border-right:1px solid rgba(192,57,43,0.15);">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">DROITS LSPD / BCSO</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;">Fouille & contrôle d'identité citoyens · <span style="color:var(--iad);">Déploiement US Army</span></div>
+        </div>
+        <div style="padding:1.25rem 1.5rem;">
+          <div style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.2em;margin-bottom:6px;">ÉQUIPEMENT AUTORISÉ</div>
+          <div style="font-size:13px;color:var(--text);font-weight:600;"><span style="color:var(--iad);">Gilet lourd · Arme lourde</span> pour tout déplacement</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tableau récap -->
+    <div style="margin-top:3rem;border-top:1px solid rgba(201,168,76,0.12);padding-top:2rem;">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:0.4em;margin-bottom:1.5rem;opacity:0.7;">TABLEAU RÉCAPITULATIF</div>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead>
+            <tr style="border-bottom:1px solid rgba(201,168,76,0.2);">
+              <th style="padding:10px 14px;text-align:left;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.2em;color:var(--muted);font-weight:400;">CRITÈRE</th>
+              <th style="padding:10px 14px;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.1em;color:#3a7bd5;">DEFCON 5</th>
+              <th style="padding:10px 14px;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.1em;color:#4a8c42;">DEFCON 4</th>
+              <th style="padding:10px 14px;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.1em;color:#d4b84a;">DEFCON 3</th>
+              <th style="padding:10px 14px;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.1em;color:#e0872a;">DEFCON 2</th>
+              <th style="padding:10px 14px;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.1em;color:var(--iad);">DEFCON 1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+              <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.15em;color:var(--muted);">DURÉE</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--muted);">Indéterminé</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--muted);">Indéterminé</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--muted);">Indéterminé</td>
+              <td style="padding:10px 14px;text-align:center;color:#e0872a;font-weight:600;">1 à 48h</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--iad);font-weight:600;">1 à 96h</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+              <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.15em;color:var(--muted);">PROLONGEMENT</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--muted);">—</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--muted);">—</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--muted);">—</td>
+              <td style="padding:10px 14px;text-align:center;color:#e0872a;font-weight:600;">1 à 24h</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--iad);font-weight:600;">1 à 96h</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+              <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.15em;color:var(--muted);">AUTORISATION</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Gouvernement</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Gouvernement</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Gouvernement</td>
+              <td style="padding:10px 14px;text-align:center;color:#e0872a;font-weight:600;">Bureau Oval</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--iad);font-weight:600;">Bureau Oval</td>
+            </tr>
+            <tr style="border-bottom:1px solid rgba(255,255,255,0.04);">
+              <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.15em;color:var(--muted);">GILET</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Sans poche</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Sous uniforme</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Avec poche</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Avec poche</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--iad);font-weight:600;">Lourd</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 14px;font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.15em;color:var(--muted);">ARME</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Légère</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--text);">Légère</td>
+              <td style="padding:10px 14px;text-align:center;color:#d4b84a;font-weight:600;">Lourde ×1 / patrouille</td>
+              <td style="padding:10px 14px;text-align:center;color:#e0872a;font-weight:600;">Lourde (déplacement)</td>
+              <td style="padding:10px 14px;text-align:center;color:var(--iad);font-weight:600;">Lourde (partout)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer style="background:#030405;border-top:1px solid rgba(201,168,76,0.12);padding:2rem 4rem;margin-top:0;">
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:2rem;">
+    <div style="display:flex;align-items:center;gap:14px;">
+      <div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:0.2em;color:var(--gold);">B.C.S.O</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.2em;margin-top:2px;">Blaine County Sheriff's Office</div>
+      </div>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:0.25em;">SHERIFF 355 &nbsp;·&nbsp; STEEVE KANT &nbsp;·&nbsp; DIAMOND CITY RP</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(201,168,76,0.4);letter-spacing:0.2em;margin-top:6px;">GUIDE OFFICIEL v2.0 &nbsp;·&nbsp; BLAINE COUNTY</div>
+    </div>
+    <div style="text-align:right;">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(201,168,76,0.35);letter-spacing:0.25em;">USAGE INTERNE</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(201,168,76,0.2);letter-spacing:0.2em;margin-top:4px;">DOCUMENT OFFICIEL</div>
+    </div>
+  </div>
+</footer>
+</body></html>
+                      
